@@ -2,7 +2,7 @@ import React from 'react';
 
 const TrackingPageViews: React.FC = () => {
   return (
-    <section className="flex flex-col ml-5 w-2/5 max-md:ml-0 max-md:w-full border border-1 rounded-2xl">
+    <section className="flex flex-col ml-5 w-2/5 max-md:ml-0 max-md:w-full border border-1 rounded-2xl bg-white">
       <div className="flex overflow-hidden flex-col grow gap-4 w-full rounded-xl shadow-sm bg-[color:var(--p-color-bg-surface)] pb-[var(--p-sapce-0)] pl-[var(--p-sapce-0)] pr-[var(--p-sapce-0)] pt-[var(--p-sapce-0)] text-[color:var(--p-color-text-brand)] max-md:mt-4 max-md:max-w-full">
         <div className="flex flex-col px-4 pt-4 pb-8 w-full max-md:max-w-full">
           <div className="flex flex-col w-full">

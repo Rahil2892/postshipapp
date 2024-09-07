@@ -1,12 +1,15 @@
 import React from 'react';
-import CustomizationSection from '../CustomizationSection/CustomizationSection';
-import OnboardingSupport from '../OnboardingSupport/OnboardingSupport';
-import IntegrationSection from '../IntegrationSection/IntegrationSection';
-import CustomHtmlSection from '../CustomHtmlSection/CustomHtmlSection';
+import CustomizationSection from './CustomizationSection/CustomizationSection';
+import OnboardingSupport from './OnboardingSupport/OnboardingSupport';
+import IntegrationSection from './IntegrationSection/IntegrationSection';
+import CustomHtmlSection from './CustomHtmlSection/CustomHtmlSection';
+import Message from '../common/Message'
+
 
 const Dashboard: React.FC = () => {
   return (
     <main className="mt-8 max-md:max-w-full p-4">
+      <Message msg="Discover the Heart of Our Functionality" />
       <div className="flex gap-5 max-md:flex-col">
         <CustomizationSection
           title="Elevate Your Brand Aesthetics with Custom Tracking Page Styles"

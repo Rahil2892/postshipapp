@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ColorPicker from './ColorPicker';
-import ActionButton from '../common/ActionButton';
+import ActionButton from '../../common/ActionButton';
 
 interface CustomizationSectionProps {
   title: string;

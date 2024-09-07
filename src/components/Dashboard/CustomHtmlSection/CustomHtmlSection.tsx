@@ -1,5 +1,5 @@
 import React from 'react';
-import ActionButton from '../common/ActionButton';
+import ActionButton from '../../common/ActionButton';
 
 const CustomHtmlSection: React.FC = () => {
   return (
