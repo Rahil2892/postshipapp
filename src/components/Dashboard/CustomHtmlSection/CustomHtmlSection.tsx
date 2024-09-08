@@ -1,7 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 import ActionButton from '../../common/ActionButton';
 
 const CustomHtmlSection: React.FC = () => {
+  const [searchText, setSearchText] = useState('');
+  const [isFocused, setIsFocused] = useState(false);
+
+  const sendToast = (val: string) => {
+    if (val.trim() !== '') {
+      toast(`HTML content submitted: ${val}`);
+    } else {
+      toast.error("Textarea cannot be empty!");
+    }
+  };
+
+  const changeHandler = (val: string) => {
+    setSearchText(val);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault(); // Prevent new line in the textarea on Enter
+      sendToast(searchText);
+    }
+  };
+
   return (
     <section className="flex flex-col ml-5 w-[30%] max-md:ml-0 max-md:w-full border border-1 rounded-2xl">
       <div className="flex overflow-hidden flex-col gap-4 w-full rounded-2xl shadow-sm bg-[color:var(--p-color-bg-surface)] pb-[var(--p-sapce-0)] pl-[var(--p-sapce-0)] pr-[var(--p-sapce-0)] pt-[var(--p-sapce-0)] max-md:mt-4">
@@ -20,9 +43,16 @@ const CustomHtmlSection: React.FC = () => {
             </label>
             <textarea
               id="htmlLink"
-              className="flex flex-col justify-center px-3 py-1.5 mt-1 w-full leading-5 whitespace-nowrap bg-white rounded-lg border border-solid border-zinc-500 min-h-[128px]"
+              className={`flex flex-col justify-center px-3 py-1.5 mt-1 w-full leading-5 whitespace-nowrap bg-white rounded-lg border border-solid ${
+                isFocused ? 'border-none' : 'border-zinc-500'
+              } min-h-[128px] focus:outline-none`}
               placeholder="Enter your HTML here"
               aria-label="HTML Link input"
+              onChange={(e) => changeHandler(e.target.value)}
+              value={searchText}
+              onKeyDown={handleKeyDown}
+              onFocus={() => setIsFocused(true)}
+              onBlur={() => setIsFocused(false)}
             ></textarea>
           </div>
           <div className="flex gap-2 items-center mt-8 max-w-full w-[266px]">

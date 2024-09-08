@@ -12,7 +12,7 @@ const IntegrationSection: React.FC = () => {
   ];
 
   return (
-    <section className="flex overflow-hidden flex-col gap-4 mt-4 shadow-sm bg-[color:var(--p-color-bg-surface)] pb-[var(--p-sapce-0)] pl-[var(--p-sapce-0)] pr-[var(--p-sapce-0)] pt-[var(--p-sapce-0)] max-md:max-w-full border border-1 rounded-2xl">
+    <section className="flex overflow-hidden flex-col gap-4 mt-4 shadow-sm bg-[color:var(--p-color-bg-surface)] pb-[var(--p-sapce-0)] pl-[var(--p-sapce-0)] pr-[var(--p-sapce-0)] pt-[var(--p-sapce-0)] max-md:max-w-full border border-1 rounded-2xl" id='integration'>
       <div className="flex flex-col px-4 pt-4 pb-6 w-full max-md:max-w-full">
         <div className="flex flex-col w-full text-[color:var(--p-color-text-brand)]">
           <h2 className="text-sm leading-none font-[650]">Explore Our Integrated Ecosystem</h2>

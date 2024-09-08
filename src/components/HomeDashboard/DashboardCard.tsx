@@ -25,7 +25,7 @@ const DashboardCard: React.FC<DashboardCardProps> = ({
 }) => {
   return (
     <article className={`flex flex-col w-[33%] max-md:ml-0 max-md:w-full border-2 rounded-2xl`}>
-      <div className={`flex overflow-hidden flex-col grow gap-4 w-full ${bgColor} rounded-xl shadow-sm pb-[var(--p-sapce-0)] pl-[var(--p-sapce-0)] pr-[var(--p-sapce-0)] pt-[var(--p-sapce-0)] max-md:mt-4`}>
+      <div className={`flex overflow-hidden flex-col grow gap-4 w-full ${bgColor} rounded-xl shadow-sm pb-[var(--p-sapce-0)] pl-[var(--p-sapce-0)] pr-[var(--p-sapce-0)] pt-[var(--p-sapce-0)]`}>
         <div className="flex flex-col px-4 pt-4 pb-6 w-full">
           <div className={`flex flex-col w-full ${textColor}`}>
             <div className="flex gap-2 items-start w-full text-sm leading-none font-[650]">

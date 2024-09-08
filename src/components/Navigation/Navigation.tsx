@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NavItem from './NavItem';
 import NavActionItem from './NavActionItem';
 
 const Navigation: React.FC = () => {
+  const [activeNavItem, setActiveNavItem] = useState<string>('Home'); // Track active nav item
+
   const navItems = [
-    { label: 'Home', isActive: true },
-    { label: 'Orders' },
-    { label: 'Integrations' },
-    { label: 'Tracking Page', hasDropdown: true },
-    { label: 'Partner with Us' }
+    { label: 'Home', link: '/#home' },
+    { label: 'Orders', link: '/#orders' },
+    { label: 'Integrations', link: '/#integration' },
+    { label: 'Tracking Page', hasDropdown: true, link: '/#trackingPage' },
+    { label: 'Partner with Us', link: '/#partner' }
   ];
 
   const actionItems = [
@@ -17,12 +19,21 @@ const Navigation: React.FC = () => {
     { icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/212e6aa2e5826e4c396931d81e9580675bec8215a9ab9f5c40081bc6a1f86e3d?placeholderIfAbsent=true&apiKey=1516c456a62546418cdc64c619308aeb', label: 'Settings' }
   ];
 
+  const handleNavItemClick = (label: string) => {
+    setActiveNavItem(label); // Set the clicked item as active
+  };
+
   return (
     <nav className="flex flex-col pt-4 w-full text-sm leading-none bg-white font-[650] max-md:max-w-full">
-      <div className="flex flex-wrap gap-5 justify-between self-center w-full max-w-[1139px] max-md:max-w-full max-sm:p-5">
-        <div className="flex flex-wrap gap-8 items-start text-[color:var(--p-color-text-brand)] max-md:max-w-full">
+      <div className="flex flex-wrap-reverse sm:flex-wrap gap-5 justify-between self-center w-full max-w-[1139px] max-md:max-w-full max-sm:p-5">
+        <div className="flex flex-wrap justify-center gap-8 items-start text-[color:var(--p-color-text-brand)] max-md:max-w-full">
           {navItems.map((item, index) => (
-            <NavItem key={index} {...item} />
+            <NavItem
+              key={index}
+              {...item}
+              isActive={activeNavItem === item.label}
+              onClick={() => handleNavItemClick(item.label)} // Pass the handler to each NavItem
+            />
           ))}
         </div>
         <div className="flex gap-8 whitespace-nowrap text-[color:var(--p-color-text-secondary)]">

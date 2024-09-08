@@ -38,7 +38,7 @@ const HomeDashboard: React.FC<HomeDashboardProps> = () => {
   ];
 
   return (
-    <section className="px-5 mt-8 max-md:max-w-full max-sm:p-5">
+    <section className="px-5 mt-8 max-md:max-w-full max-sm:p-5" id='orders'>
       <Message msg="Welcome John Mathew!!" />
       <div className="flex gap-5 max-md:flex-col">
         {cardData.map((card, index) => (

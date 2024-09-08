@@ -8,7 +8,7 @@ import Message from '../common/Message'
 
 const Dashboard: React.FC = () => {
   return (
-    <main className="mt-8 max-md:max-w-full p-4">
+    <main className="mt-8 max-md:max-w-full p-4" id='partner'>
       <Message msg="Discover the Heart of Our Functionality" />
       <div className="flex gap-5 max-md:flex-col">
         <CustomizationSection

@@ -3,7 +3,7 @@ import React from 'react';
 const StarFacts: React.FC = () => {
   return (
     <section className="flex flex-col ml-5 w-[19%] max-md:ml-0 max-md:w-full">
-      <div className="flex overflow-hidden flex-col gap-4 mx-auto w-full shadow-sm bg-[color:var(--p-color-bg-surface)] min-h-[368px] pb-[var(--p-sapce-0)] pl-[var(--p-sapce-0)] pr-[var(--p-sapce-0)] pt-[var(--p-sapce-0)] max-md:mt-4 bg-yellow-700 border border-1 rounded-2xl">
+      <div className="flex overflow-hidden flex-col gap-4 mx-auto w-full shadow-sm bg-[color:var(--p-color-bg-surface)] pb-[var(--p-sapce-0)] pl-[var(--p-sapce-0)] pr-[var(--p-sapce-0)] pt-[var(--p-sapce-0)] max-md:mt-4 bg-yellow-700 border border-1 rounded-2xl">
         <div className="flex relative gap-6 items-start pt-4 pr-11 pb-6 pl-4 w-full max-md:pr-5">
           <div className="flex z-0 flex-col flex-1 shrink basis-0">
             <h2 className="text-sm leading-5 font-bold text-[color:var(--p-color-text-brand-on-bg-fill)]">
